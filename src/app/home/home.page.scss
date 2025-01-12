@@ -25,3 +25,18 @@
 #container a {
   text-decoration: none;
 }
+
+ion-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00; /* Cambia el color del título */
+  --ion-background-color: red;
+}
+
+.test {
+  background-color: red; /* Si deseas especificar solo para el toolbar */
+}
+
+ion-content{
+  --background: url('https://www.thisisdig.com/wp-content/uploads/2024/08/Twenty-One-Pilots-Mason-Castillo-copy-640x360.jpg') 0 0/100% 100% no-repeat;
+}

@@ -1,34 +1,139 @@
-<ion-header [translucent]="true">
-  <ion-toolbar class="bg-black-800 text-black-100">
-    <ion-title class="text-xl font-semibold">
-      My App
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+   body {
+    margin: 0;
+    background-image: url('https://www.thisisdig.com/wp-content/uploads/2024/08/Twenty-One-Pilots-Mason-Castillo-copy-640x360.jpg');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
+  }
+
+  ion-content {
+    background-color: black !important;
+    color: white;
+  }
+
+  .btn-primary {
+    background-color: rgb(46, 5, 5);
+    border-color: red;
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(85, 77, 7);
+    color: white;
+    border-color: white;
+  }
+</style>
+
+
+<ion-header [translucent]="true" class="test">
+  <ion-toolbar>
+    <ion-title class="test">
+      TWENTY ONE PILOTS FanPage
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="bg-gray-900 text-gray-200">
-  <ion-header>
-    <ion-toolbar class="bg-black-800">
-      <ion-title size="large" class="text-xl font-semibold text-black-100">
-        Datos Personales
-      </ion-title>
-    </ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-header style="background-color: red;" class="test">
+    <ion-title size="large" class="test">
+      Home
+    </ion-title>
   </ion-header>
 
-  <div class="flex items-center justify-center min-h-screen px-4">
-    <div class="bg-cyan-700 rounded-lg shadow-lg p-20 max-w-sm text-center">
-      <h1 class="text-3xl font-bold mb-4 text-gray-50">EA3</h1>
-      <p class="text-lg mb-4 text-gray-300">
-        Omar Del Toro Covarrubias 6°C<br>
-      </p>
-      <button
-        class="bg-red-500 hover:bg-blue-700 text-white hover:text-black font-bold py-2 px-6 rounded transition duration-600"
-      >
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D">Botón mágico</a>
-      </button>
-      <div class="mt-6 text-gray-400 text-sm font-bold">
-        Matrícula 19033
+  <!-- Contenedor de tarjetas -->
+  <div class="container my-4">
+    <div class="row g-4">
+      <!-- Tarjeta 1 -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white h-100" style="background-color: red;">
+          <img src="https://crazyminds.es/wp-content/uploads/TWENTY-ONE-PILOTS-2019.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">About Twenty One Pilots</h5>
+            <p class="card-text">Essential information and fun facts about the band</p>
+            <a routerLink="/about" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white h-100" style="background-color: red;">
+          <img src="https://itsoundsalternative.com/wp-content/uploads/2024/05/unnamed.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Clancy World Tour</h5>
+            <p class="card-text">Dates and locations of the most recent band's tour</p>
+            <a routerLink="/tour" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white h-100" style="background-color: red;">
+          <img src="https://i.scdn.co/image/ab6761610000e5eb274df4dfcb960867eccedfb5" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TOP Discography</h5>
+            <p class="card-text">Discover all the studio albums of the band</p>
+            <a routerLink="/disco" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white h-100" style="background-color: red;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReIudNcgic6-_eZIQYDFTMulFtvZK7z99VMg&s" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">TOP Merch</h5>
+            <p class="card-text">Check out the latest merch available in the store</p>
+            <a routerLink="/merch" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white h-100" style="background-color: red;">
+          <img src="https://www.azcentral.com/gcdn/-mm-/18e6d69e5da630ce37a497514798a97de656c210/c=0-60-2998-1754/local/-/media/2015/05/20/Phoenix/Phoenix/635677381468156961-twenty-one-pilots.jpg?width=2998&height=1694&fit=crop&format=pjpg&auto=webp" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Greatest Hits</h5>
+            <p class="card-text">Listen to the most emblematic songs of the band</p>
+            <a routerLink="/songs" class="btn btn-primary">See more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="col-md-4 d-flex">
+        <div class="card text-white h-100" style="background-color: red;">
+          <img src="https://www.ninefiction.com/wp-content/uploads/2019/05/Twenty-One-pilots-Guadalajara.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Photo Album</h5>
+            <p class="card-text">Some photos of the band throughout the years</p>
+            <a routerLink="/photos" class="btn btn-primary">See more</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="flex items-center justify-center min-h-screen px-4">
+    <div class="bg-red-700 rounded-lg shadow-lg p-20 max-w-sm text-center">
+      <h1 class="text-3xl font-bold mb-4 text-yellow-300">TWENTY ONE PILOTS</h1>
+      <img src="https://s1.ticketm.net/dam/a/356/c6611e71-32a3-483f-8c7d-52eeb37af356_CUSTOM.jpg" />
+      <br>
+      <button
+        class="bg-red-500 hover:bg-yellow-700 text-white hover:text-black font-bold py-2 px-6 rounded transition duration-600"
+      >
+        <a href="https://www.twentyonepilots.com/">Official Website</a>
+      </button>
+      <div class="mt-6 text-gray-400 text-sm font-bold">
+        &copy; Omar Del Toro Covarrubias
+      </div>
+    </div>
+  </div>
+
 </ion-content>
+

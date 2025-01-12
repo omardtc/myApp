@@ -1,0 +1,133 @@
+/* Variables de estilo */
+$font-family: 'Arial, sans-serif';
+$primary-color: yellow;
+$text-color: white;
+$text-secondary-color: white;
+$background-color: black;
+$white: #ffffff;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$secondary-shadow-color: rgba(0, 0, 0, 0.2);
+
+
+
+/* Sección principal */
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  // Crea tres columnas de igual tamaño
+    gap: 20px;  // Espacio entre las columnas
+    align-items: center;  // Centra verticalmente los contenidos de cada celda
+  }
+  
+  .album {
+    align-items: center;      // Centra verticalmente
+    text-align: center;       // Asegura que cualquier texto dentro también esté centrado
+  }
+
+  .album img {
+    width: 100%;       // Reduces el tamaño de la imagen al 80% de su tamaño original
+    height: 50;     // Mantiene la relación de aspecto de la imagen
+  }
+  
+
+.btn-primary {
+    background-color: rgb(46, 5, 5);
+    border-color: red;
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(85, 77, 7);
+    color: white;
+    border-color: white;
+  }
+
+  .btn-secondary {
+    background-color: rgb(46, 5, 5);
+    border-color: red;
+    width: 175px;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgb(85, 77, 7);
+    color: white;
+    border-color: white;
+  }
+
+.about-band {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px $shadow-color;
+
+  /* Centrar contenido con flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Encabezado */
+  .about-header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .about-title {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  /* Contenido */
+  .about-content {
+    text-align: center;
+
+    p {
+      font-size: 1.1rem;
+      color: $text-secondary-color;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  }
+
+  /* Imagen */
+  .band-image {
+    text-align: center;
+    margin: 20px 0;
+
+    img {
+      max-width: 100%;
+      max-height: 100px; /* Tamaño máximo para controlar la altura */
+      margin: 0 auto; /* Centrar horizontalmente */
+      display: block; /* Garantiza el centrado en bloque */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px $secondary-shadow-color;
+    }
+
+    figcaption {
+      font-size: 0.9rem;
+      color: lighten($text-secondary-color, 20%);
+      margin-top: 10px;
+    }
+  }
+}
+
+/* Adaptabilidad */
+@media (max-width: 768px) {
+  .about-band {
+    .about-header {
+      .about-title {
+        font-size: 2rem;
+      }
+    }
+
+    .about-content {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
